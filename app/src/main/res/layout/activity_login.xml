@@ -10,6 +10,7 @@
     tools:context=".activities.LoginActivity" android:id="@+id/loginActivity">
 
     <TextView
+        android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login Chat AI App"
@@ -71,19 +72,20 @@
         android:layout_marginTop="16dp"
         android:visibility="gone" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="You don't have account?"
-            android:layout_marginTop="20dp"
-            />
-        <TextView
-            android:id="@+id/register_link"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Clik Here!"
-            android:textColor="@color/text_color"
-            android:focusable="true"
-            android:clickable="true"/>
+    <TextView
+        android:id="@+id/footer_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You don't have account?"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/register_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clik Here!"
+        android:textColor="@color/text_color"
+        android:focusable="true"
+        android:clickable="true"/>
 
 </LinearLayout>

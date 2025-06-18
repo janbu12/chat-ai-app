@@ -10,6 +10,7 @@
     tools:context=".activities.RegisterActivity" android:id="@+id/registerActivity">
 
     <TextView
+        android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register Chat AI App"
@@ -97,6 +98,7 @@
         android:visibility="gone" />
 
     <TextView
+        android:id="@+id/login_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="You have account?"

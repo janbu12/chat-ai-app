@@ -21,7 +21,7 @@ import com.example.aichatapi.tasks.RegisterTask;
 
 public class RegisterActivity extends AppCompatActivity {
     private EditText etUsername, etFullname, etPassword, etConfirmPassword;
-    private TextView loginLink;
+    private TextView tvLoginLink, tvHeaderTitle, tvLoginInfo;
     private ProgressBar progressBar;
     private Button btnRegister;
 
@@ -37,9 +37,11 @@ public class RegisterActivity extends AppCompatActivity {
         etFullname = findViewById(R.id.et_name);
         etPassword = findViewById(R.id.et_password);
         etConfirmPassword = findViewById(R.id.et_confirmPassword);
-        loginLink = findViewById(R.id.login_link);
+        tvLoginLink = findViewById(R.id.login_link);
         progressBar = findViewById(R.id.progress_bar_register);
         btnRegister = findViewById(R.id.btn_register);
+        tvHeaderTitle = findViewById(R.id.header_title);
+        tvLoginInfo = findViewById(R.id.login_info);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.registerActivity), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -47,7 +49,7 @@ public class RegisterActivity extends AppCompatActivity {
             return insets;
         });
 
-        loginLink.setOnClickListener(new View.OnClickListener() {
+        tvLoginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
@@ -119,6 +121,9 @@ public class RegisterActivity extends AppCompatActivity {
             etFullname.setEnabled(false);
             etPassword.setEnabled(false);
             etConfirmPassword.setEnabled(false);
+            tvLoginInfo.animate().alpha(0.5f).setDuration(300).start();
+            tvHeaderTitle.animate().alpha(0.5f).setDuration(300).start();
+            tvLoginLink.animate().alpha(0.5f).setDuration(300).start();
         } else {
             progressBar.setVisibility(View.GONE);
             btnRegister.setEnabled(true);
@@ -126,6 +131,9 @@ public class RegisterActivity extends AppCompatActivity {
             etFullname.setEnabled(true);
             etPassword.setEnabled(true);
             etConfirmPassword.setEnabled(true);
+            tvLoginInfo.animate().alpha(1.0f).setDuration(300).start();
+            tvHeaderTitle.animate().alpha(1.0f).setDuration(300).start();
+            tvLoginLink.animate().alpha(1.0f).setDuration(300).start();
         }
     }
 }

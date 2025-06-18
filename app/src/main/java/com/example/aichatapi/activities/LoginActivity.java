@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,7 +28,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText etUsername, etPassword;
-    private TextView registerLink;
+    private TextView registerLink, registerInfo, headerTitle;
     private Button btnLogin;
     private ProgressBar progressBar;
 
@@ -45,6 +46,9 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btn_login);
         progressBar = findViewById(R.id.progress_bar);
         registerLink = findViewById(R.id.register_link);
+        headerTitle = findViewById(R.id.header_title);
+        registerInfo = findViewById(R.id.footer_title);
+
 
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,15 +108,21 @@ public class LoginActivity extends AppCompatActivity {
 
     private void showLoading(boolean isLoading) {
         if (isLoading) {
-            progressBar.setVisibility(View.VISIBLE); // Tampilkan ProgressBar
-            btnLogin.setEnabled(false); // Nonaktifkan tombol Login
-            etUsername.setEnabled(false); // Nonaktifkan input username
-            etPassword.setEnabled(false); // Nonaktifkan input password
+            progressBar.setVisibility(View.VISIBLE);
+            btnLogin.setEnabled(false);
+            etUsername.setEnabled(false);
+            etPassword.setEnabled(false);
+            headerTitle.animate().alpha(0.5f).setDuration(300).start();
+            registerInfo.animate().alpha(0.5f).setDuration(300).start();
+            registerLink.animate().alpha(0.5f).setDuration(300).start();
         } else {
-            progressBar.setVisibility(View.GONE); // Sembunyikan ProgressBar
-            btnLogin.setEnabled(true); // Aktifkan tombol Login
-            etUsername.setEnabled(true); // Aktifkan input username
-            etPassword.setEnabled(true); // Aktifkan input password
+            progressBar.setVisibility(View.GONE);
+            btnLogin.setEnabled(true);
+            etUsername.setEnabled(true);
+            etPassword.setEnabled(true);
+            headerTitle.animate().alpha(1.0f).setDuration(300).start();
+            registerInfo.animate().alpha(1.0f).setDuration(300).start();
+            registerLink.animate().alpha(1.0f).setDuration(300).start();
         }
     }
 
