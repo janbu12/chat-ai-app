@@ -47,7 +47,6 @@ public class RegisterActivity extends AppCompatActivity {
             return insets;
         });
 
-        //Login Link Function
         loginLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

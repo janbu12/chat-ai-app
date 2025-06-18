@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvUsernameDisplay;
     private Button btnLogout;
     private RecyclerView rvChatMessages;
+    private LinearLayout llHeaderLayout, llInputMessageLayout;
     private EditText etMessageInput;
     private Button btnSendMessage;
     private ProgressBar progressBar;
@@ -74,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
         btnSendMessage = findViewById(R.id.btnKirim);
         progressBar = findViewById(R.id.progress_barLogout); // ProgressBar untuk logout/kirim chat
         progressBarChatHistory = findViewById(R.id.progress_barChatHistory); // Asumsikan Anda menambahkan ini di activity_main.xml
+        llHeaderLayout = findViewById(R.id.header_layout);
+        llInputMessageLayout = findViewById(R.id.message_input_layout);
 
         // --- Setup Chat RecyclerView ---
         messageList = new ArrayList<>();
@@ -239,11 +243,16 @@ public class MainActivity extends AppCompatActivity {
             btnLogout.setEnabled(false);
             btnSendMessage.setEnabled(false);
             etMessageInput.setEnabled(false);
+            rvChatMessages.animate().alpha(0.5f).setDuration(300).start();
+            llHeaderLayout.animate().alpha(0.5f).setDuration(300).start();
         } else {
             progressBar.setVisibility(View.GONE);
             btnLogout.setEnabled(true);
             btnSendMessage.setEnabled(true);
             etMessageInput.setEnabled(true);
+            rvChatMessages.animate().alpha(1.0f).setDuration(300).start();
+            llHeaderLayout.animate().alpha(1.0f).setDuration(300).start();
+
         }
     }
 

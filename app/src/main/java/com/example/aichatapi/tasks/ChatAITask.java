@@ -11,6 +11,7 @@ import com.google.gson.JsonArray; // Penting untuk parsing array di root
 import com.example.aichatapi.models.ErrorResponse;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -37,6 +38,8 @@ public class ChatAITask extends AsyncTask<String, Void, String> { // Mengembalik
     private OkHttpClient client;
     private Gson gson;
 
+    private Long callTimeoutSeconds = 60L;
+
     public ChatAITask(String baseUrl, ChatAICallback callback, Context context) { // Tambahkan context
         this.baseUrl = baseUrl;
         this.callback = callback;
@@ -45,6 +48,9 @@ public class ChatAITask extends AsyncTask<String, Void, String> { // Mengembalik
         // Inisialisasi OkHttpClient dengan AuthInterceptor
         // OkHttpClient.Builder builder = new OkHttpClient.Builder(); // Untuk produksi
         OkHttpClient.Builder builder = UnsafeOkHttpClient.getUnsafeOkHttpClient().newBuilder(); // HANYA UNTUK DEVELOPMENT!
+        builder.connectTimeout(30, TimeUnit.SECONDS);
+        builder.readTimeout(60, TimeUnit.SECONDS);
+        builder.writeTimeout(30, TimeUnit.SECONDS);
         builder.addInterceptor(new AuthInterceptor(context)); // AuthInterceptor akan menambahkan token
         this.client = builder.build();
     }
