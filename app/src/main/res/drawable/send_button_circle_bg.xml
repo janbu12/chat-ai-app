@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State Pressed/Clicked -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/button_background_color_pressed"/>
+            <size android:width="48dp" android:height="48dp"/>
+        </shape>
+    </item>
+    <!-- Default state -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/button_background_color"/>
+            <size android:width="48dp" android:height="48dp"/>
+        </shape>
+    </item>
+</selector>

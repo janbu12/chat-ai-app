@@ -12,8 +12,9 @@
         android:id="@+id/tv_message_content"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:padding="10dp"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:textColor="#333333"
         android:maxWidth="280dp"
         android:text="Contoh pesan" />

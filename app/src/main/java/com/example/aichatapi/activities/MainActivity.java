@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView rvChatMessages;
     private LinearLayout llHeaderLayout, llInputMessageLayout;
     private EditText etMessageInput;
-    private Button btnSendMessage;
+    private ImageButton btnSendMessage;
     private ProgressBar progressBar;
     private ProgressBar progressBarChatHistory; // Tambahkan ProgressBar baru untuk riwayat chat
 

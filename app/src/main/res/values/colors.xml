@@ -13,4 +13,5 @@
     <color name="blue_800">#41558C</color>
     <color name="blue_900">#384970</color>
     <color name="blue_950">#262E45</color>
+    <color name="button_background_color_pressed">#4A148C</color>
 </resources>

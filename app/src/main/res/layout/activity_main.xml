@@ -86,26 +86,28 @@
 
         <EditText
             android:id="@+id/et_message_input"
+            android:fontFamily="@font/poppins"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="14sp"
+            android:maxLines="5"
             android:hint="Ketik pesan..."
             android:padding="10dp"
-            android:background="@drawable/input_background"
+            android:background="@drawable/rounded_edittext_bg"
             android:textColor="@android:color/black"
             android:textColorHint="@android:color/darker_gray" />
 
-        <com.google.android.material.button.MaterialButton
+        <ImageButton
             android:id="@+id/btnKirim"
-            android:fontFamily="@font/poppins"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Kirim"
-            android:textColor="@android:color/white"
-            android:textSize="16dp"
-            app:cornerRadius="8dp"
-            android:backgroundTint="@color/button_background_color" />
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/send_button_circle_bg"
+            android:src="@drawable/image_send"
+            android:contentDescription="Kirim Pesan"
+            android:layout_marginLeft="8dp"
+            android:padding="12dp"
+            android:scaleType="fitCenter" />
 
     </LinearLayout>
 
