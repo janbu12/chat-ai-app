@@ -16,7 +16,6 @@ Sebuah aplikasi chat Android modern yang terhubung dengan backend AI menggunakan
     * [Frontend (Aplikasi Android)](#frontend-aplikasi-android)
 * [Penggunaan Aplikasi](#penggunaan-aplikasi)
 * [Struktur API](#struktur-api)
-* [Lisensi](#lisensi)
 
 ---
 
@@ -245,7 +244,3 @@ Aplikasi berinteraksi dengan backend n8n Anda melalui endpoint berikut:
             "message": "string"
         }
         ```
-
-## Lisensi
-
-Proyek ini dilisensikan di bawah [Lisensi MIT](https://opensource.org/licenses/MIT).
