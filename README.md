@@ -1,7 +1,9 @@
 # ChatAI App
 
 [![Lisensi MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Status Build](https://img.shields.io/badge/Build-Passing-brightgreen)](https://github.com/yourusername/ChatAIApp/actions) Sebuah aplikasi chat Android modern yang terhubung dengan backend AI menggunakan n8n, memungkinkan pengguna untuk berinteraksi dengan AI, mendaftar, dan login dengan sistem otentikasi berbasis JWT.
+[![Status Build](https://img.shields.io/badge/Build-Passing-brightgreen)](https://github.com/yourusername/ChatAIApp/actions) 
+
+Sebuah aplikasi chat Android modern yang terhubung dengan backend AI menggunakan n8n, memungkinkan pengguna untuk berinteraksi dengan AI, mendaftar, dan login dengan sistem otentikasi berbasis JWT.
 
 ## Daftar Isi
 
